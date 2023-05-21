@@ -8,9 +8,9 @@ export default defineConfig({
     outDir: "../dist",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "src/public/index.html"),
-        cart: resolve(__dirname, "src/public/cart/index.html"),
-        checkout: resolve(__dirname, "src/public/checkout/index.html"),
+        main: resolve(__dirname, "src/index.html"),
+        cart: resolve(__dirname, "src/cart/index.html"),
+        checkout: resolve(__dirname, "src/checkout/index.html"),
         product1: resolve(
           __dirname,
           "src/public/product_pages/cedar-ridge-rimrock-2.html"
