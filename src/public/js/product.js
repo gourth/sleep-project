@@ -5,7 +5,7 @@ import { findProductById } from "./productData.mjs";
 function addProductToCart(product) {
   let cartItems = getLocalStorage("so-cart", product);
 
-  if (!cartItems) {
+  if (!Array.isArray(cartItems)) {
     cartItems = [];
   }
 
