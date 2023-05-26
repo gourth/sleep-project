@@ -26,11 +26,4 @@ async function addToCartHandler(e) {
 document
   .getElementById("addToCart")
   .addEventListener("click", addToCartHandler);
-
-function getCartLength() {
-  let cartItems = getLocalStorage("so-cart");
-  return cartItems ? cartItems.length : "0";
-}
-
-const cartLength = getCartLength();
-console.log(cartLength);
+  
