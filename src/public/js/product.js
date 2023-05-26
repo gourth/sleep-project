@@ -6,7 +6,7 @@ const productId = getParam("product");
 productDetails(productId);
 
 function addProductToCart(product) {
-  let cartItems = getLocalStorage("so-cart", product);
+  let cartItems = getLocalStorage("so-cart");
 
   if (!Array.isArray(cartItems)) {
     cartItems = [];
@@ -27,3 +27,10 @@ document
   .getElementById("addToCart")
   .addEventListener("click", addToCartHandler);
 
+function getCartLength() {
+  let cartItems = getLocalStorage("so-cart");
+  return cartItems ? cartItems.length : "0";
+}
+
+const cartLength = getCartLength();
+console.log(cartLength);
