@@ -22,4 +22,5 @@ export default async function productList(selector, category) {
   const selectedProduct = [products[0], products[1], products[3], products[5]];
   
   renderListWithTemplate(productCardTemplate, el, selectedProduct);
+  document.querySelector(".title").innerHTML = category;
   }
