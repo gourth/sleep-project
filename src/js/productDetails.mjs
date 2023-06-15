@@ -1,5 +1,9 @@
 import { findProductById } from "./externalServices.mjs";
+<<<<<<< HEAD:src/js/productDetails.mjs
 import { setLocalStorage, getLocalStorage, alertMessage } from "./utils.mjs";
+=======
+import { setLocalStorage, getLocalStorage } from "./utils.mjs";
+>>>>>>> 351967d9b46b8cbf0e20d5f679e2652d2f361608:src/public/js/productsDetail.mjs
 
 let product = {};
 
@@ -20,7 +24,10 @@ function addToCart() {
   // then add the current product to the list
   cartContents.push(product);
   setLocalStorage("so-cart", cartContents);
+<<<<<<< HEAD:src/js/productDetails.mjs
   alertMessage(`${product.NameWithoutBrand} added to cart!`);
+=======
+>>>>>>> 351967d9b46b8cbf0e20d5f679e2652d2f361608:src/public/js/productsDetail.mjs
 }
 function renderProductDetails() {
   document.querySelector("#productName").innerText = product.Brand.Name;
