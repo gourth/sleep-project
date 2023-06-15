@@ -1,6 +1,5 @@
 import { findProductById } from "./externalServices.mjs";
-import { setLocalStorage, getLocalStorage } from "./utils.mjs";
-
+import { setLocalStorage, getLocalStorage, alertMessage } from "./utils.mjs";
 let product = {};
 
 export default async function productDetails(productId) {
@@ -20,6 +19,7 @@ function addToCart() {
   // then add the current product to the list
   cartContents.push(product);
   setLocalStorage("so-cart", cartContents);
+  alertMessage(`${product.NameWithoutBrand} added to cart!`);
 }
 function renderProductDetails() {
   document.querySelector("#productName").innerText = product.Brand.Name;
