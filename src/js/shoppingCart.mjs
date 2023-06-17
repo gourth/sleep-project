@@ -2,8 +2,15 @@ import { getLocalStorage, renderListWithTemplate } from "./utils.mjs";
 
 export default function shoppingCart() {
   const cartItems = getLocalStorage("so-cart");
+  console.log(cartItems);
   const outputEl = document.querySelector(".product-list");
-  renderListWithTemplate(cartItemTemplate, outputEl, cartItems);
+
+  if (cartItems) {
+    renderListWithTemplate(cartItemTemplate, outputEl, cartItems);
+  } else {
+    document.querySelector(".product-list").innerHTML = "Your cart is empty";
+  }
+
   const total = calculateListTotal(cartItems);
   displayCartTotal(total);
 }
@@ -37,6 +44,11 @@ function cartItemTemplate(item) {
 }
 
 function calculateListTotal(list) {
+
+  if (list === null) {
+    list = 0;
+  }
+
   const amounts = list.map((item) => item.FinalPrice);
   const total = amounts.reduce((sum, item) => sum + item, 0);
   return total;
