@@ -2,7 +2,6 @@ import { getLocalStorage, renderListWithTemplate } from "./utils.mjs";
 
 export default function shoppingCart() {
   const cartItems = getLocalStorage("so-cart");
-  console.log(cartItems);
   const outputEl = document.querySelector(".product-list");
 
   if (cartItems) {
@@ -46,7 +45,7 @@ function cartItemTemplate(item) {
 function calculateListTotal(list) {
 
   if (list === null) {
-    list = 0;
+    return 0;
   }
 
   const amounts = list.map((item) => item.FinalPrice);
