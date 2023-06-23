@@ -309,6 +309,18 @@ button {
   cursor: pointer;
 }
 
+/* Backpack total style */
+.totalInCart {
+  background-color: var(--primary-color);
+  color:  var(--secondary-color);
+  padding: 0px 5px 0px 5px;
+  border-radius: 100px;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 500px) {
   body {
     max-width: 1080px;

@@ -1,3 +1,4 @@
+import { totalInCart } from "./backpackTotal";
 import { findProductById } from "./externalServices.mjs";
 import { setLocalStorage, getLocalStorage, alertMessage } from "./utils.mjs";
 let product = {};
@@ -20,6 +21,7 @@ function addToCart() {
   cartContents.push(product);
   setLocalStorage("so-cart", cartContents);
   alertMessage(`${product.NameWithoutBrand} added to cart!`);
+  totalInCart();
 }
 function renderProductDetails() {
   document.querySelector("#productName").innerText = product.Brand.Name;
