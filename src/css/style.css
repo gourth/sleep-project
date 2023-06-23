@@ -305,6 +305,9 @@ button {
 .alert > p {
   margin: 0;
 }
+.alert span {
+  cursor: pointer;
+}
 
 @media screen and (min-width: 500px) {
   body {
