@@ -335,6 +335,12 @@ button {
   }
 }
 
+@media screen and (min-width: 1085px) {
+  .totalInCart {
+    right: 140px;
+  }
+}
+
 footer {
   font-size: var(--small-font);
   padding: 1em;
