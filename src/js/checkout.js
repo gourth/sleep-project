@@ -1,7 +1,9 @@
 import { loadHeaderFooter } from "./utils.mjs";
 import checkoutProcess from "./checkoutProcess.mjs";
+import { totalInCart } from "./backpackTotal";
 
 loadHeaderFooter();
+totalInCart();
 
 checkoutProcess.init("so-cart", ".checkout-summary");
 
