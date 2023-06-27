@@ -6,10 +6,7 @@ export default function shoppingCart() {
 
   if (cartItems) {
     renderListWithTemplate(cartItemTemplate, outputEl, cartItems);
-  } else {
-    document.querySelector(".product-list").innerHTML = "Your cart is empty";
-  }
-
+  } 
   const total = calculateListTotal(cartItems);
   displayCartTotal(total);
 }
@@ -37,7 +34,8 @@ function cartItemTemplate(item) {
   <p class="cart-card__color">${item.Colors[0].ColorName}</p>
   <p class="cart-card__quantity">qty: 1</p>
   <p class="cart-card__price">$${item.FinalPrice}</p>
-</li>`;
+</li>
+<button class="remove-item">Remove</button>`;
 
   return newItem;
 }
